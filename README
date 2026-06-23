@@ -1,0 +1,14 @@
+main-flight-opt.py
+Runnable example using Mealpy to solve a relevant airline problem: Dynamic 3D Flight 
+Trajectory Optimization through a changing wind and weather vector field.This model 
+optimizes a flight's vertical profile (altitude changes) and speed strategy over a 
+series of checkpoints to minimize total operating costs (combining fuel burn, carbon 
+taxes, and delay penalties) while actively avoiding severe convective weather (turbulence/storms).
+
+multi-pareto-flight.py:
+Multi-Objective Optimization (MOO) framework, we stop combining Fuel and Time 
+into a single cash value. Instead, we treat them as conflicting objectives to 
+find the Pareto Front—the set of optimal flight paths where you cannot improve flight 
+time without burning more fuel (and vice versa). While Mealpy is excellent for 
+single-objective problems, DEAP is the industry standard in Python for handling 
+true Pareto multi-objective optimization using NSGA-II (Non-dominated Sorting Genetic Algorithm II).
